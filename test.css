@@ -1,0 +1,48 @@
+
+
+body{
+	margin: 0;
+	font-size: 16px;
+	background-color: lightyellow;
+	
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+.custom-box{
+	max-width: 500px;
+	background-color: lightgrey;
+	margin: 40px auto;
+	padding: 30px;
+	border-radius: 10px;
+}
+.quiz-box .option-container .option{
+	background-color: grey;
+	padding: 15px;
+	font-size: 16px;
+	line-height: 22px;
+	color:black;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	
+}
+.quiz-box .question-number{
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+}
+.quiz-box .question-text{
+	font-size: 20px;
+	padding: 15px;
+}
+
+.btn{
+	padding: 10px 30px;
+	background-color: lightyellow;
+	border-radius: 5px;
+	font-size: 16px;
+	border: 1px;
+}
