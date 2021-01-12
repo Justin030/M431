@@ -28,7 +28,9 @@ body{
 	color:black;
 	border-radius: 5px;
 	margin-bottom: 10px;
-	
+    width: 100%;
+    text-align: start;
+    border: none;
 }
 .quiz-box .question-number{
 	border-bottom: 1px solid black;
