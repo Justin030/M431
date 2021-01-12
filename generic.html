@@ -33,50 +33,69 @@
 			to the full filename of your image. This is used in each section to set
 			the background image.
 		-->
-			<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							
-							
-						</header>
+	<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
+		<div class="slideshow-container">
+			<div class="inner">
+				<article class="box">
 						<div class="content">
-							
-						<h2 id="bulgy-radios-label">Wie würden dich andere beschreiben?</h2>
-							<form>
-								<li>
-									<input type="radio" id="mc" name="option" value="1">
-									<label for="mc"> Still / zurückhaltend</label> 
-								</li>
-								<li>
-									<input type="radio" id="vi" name="option" value="2">
-									<label for="vi"> Lustig / freundlich</label>
-								</li>
-								<li>
-									<input type="radio" id="ae" name="option" value="3">
-									<label for="ae">Verrückt / extrovertiert</label> 
-								</li>
-<<<<<<< HEAD
-								<li>
-									<input type="radio" id="aa" name="option" value="4">
-									<label for="aa">Offen / beliebt</label> 
-								</li>
-=======
-						
->>>>>>> 9e2d62ae2983252a0dd44aa279ec36840bad673a
-							  
-							</form>
+							<div class="Frage">
+								<h2 id="bulgy-radios-label">Wie würden dich andere beschreiben?</h2>
+									<form>
+										<li>
+											<input type="radio" id="mc" name="option" value="1">
+											<label for="mc"> Still / zurückhaltend</label> 
+										</li>
+										<li>
+											<input type="radio" id="vi" name="option" value="2">
+											<label for="vi"> Lustig / freundlich</label>
+										</li>
+										<li>
+											<input type="radio" id="ae" name="option" value="3">
+											<label for="ae">Verrückt / extrovertiert</label> 
+										</li>
+										<li>
+											<input type="radio" id="aa" name="option" value="4">
+											<label for="aa">Offen / beliebt</label> 
+										</li>
+									</form>
+							</div>
+									<div class="Frage">
+								<h2 id="bulgy-radios-label">Wie ist dein Kleidungsstil?</h2>
+									<form>
+										<li>
+											<input type="radio" id="mc" name="option" value="1">
+											<label for="mc"> Unauffällig, eher dunkel</label> 
+										</li>
+										<li>
+											<input type="radio" id="vi" name="option" value="2">
+											<label for="vi"> Basic -> Jeans /shrits mit prints</label>
+										</li>
+										<li>
+											<input type="radio" id="ae" name="option" value="3">
+											<label for="ae">Sehr bunt</label> 
+										</li>
+										<li>
+											<input type="radio" id="aa" name="option" value="4">
+											<label for="aa">Trend orientiert</label> 
+										</li>
+									</form>
+							</div>
 						</div>
+						
+						
+						
+						
 						
 						<footer>
 							<ul class="actions">
-								<li><a href="#" class="button alt icon fa-chevron-left"><span class="label">Previous</span></a></li>
-								<li><a href="#" class="button alt icon fa-chevron-right"><span class="label">Next</span></a></li>
+								<li><a class="button alt icon fa-chevron-left" onclick="plusSlides(-1)"><span class="label">Previous</span></a></li>
+								<li><a class="button alt icon fa-chevron-right" onclick="plusSlides(1)"><span class="label">Next</span></a></li>
 							</ul>
 						</footer>
-					</article>
-				</div>
-			</section>
+				</article>
+			</div>
+		</div>
+	</section>
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -88,6 +107,8 @@
 
 				</div>
 			</footer>
+			
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
