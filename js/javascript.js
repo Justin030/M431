@@ -8,13 +8,35 @@ var punkte_antworten = [["section-container1", 0],
                         ["section-container5", 0], 
                         ["section-container6", 0]];
 
+function showresults(){
+    var totalscore = 0;
+    for(var arrayIndex in punkte_antworten){
+        totalscore += punkte_antworten[arrayIndex][1];
+    }
+    document.getElementById("section-container6").style.display = "none";
+    document.getElementById("result_placeholder").innerHTML = "Your testscore is " + totalscore +"\n Congratulations!"
+    document.getElementById("result").style.display = "block";
+}
+
+function checkallanswers(){
+    var allAnswered = false;
+    for (var i=0; i<6; i++){
+        if(punkte_antworten[i][1] != 0){
+            allAnswered = true;
+        }else{
+            allAnswered = false;
+        }
+    }
+
+    if(allAnswered){
+        showresults();
+    }
+}
+
 $('label').click(function() {
     labelID = $(this).attr('id');
     labelClass = document.getElementById(labelID).className;
-
     countedSectionId = false; 
-    console.log(labelID)
-    console.log(labelClass);
 
     idLiContainer = document.getElementById(labelID).parentNode.id; 
     idFormContainer = document.getElementById(idLiContainer).parentNode.id;
@@ -47,28 +69,3 @@ $('label').click(function() {
         }
     }
 });
-
-function checkallanswers(){
-    var allAnswered = false;
-    for (var i=0; i<6; i++){
-        if(punkte_antworten[i][1] != 0){
-            allAnswered = true;
-        }else{
-            allAnswered = false;
-        }
-    }
-
-    if(allAnswered){
-        showresults();
-    }
-}
-
-function showresults(){
-    var totalscore = 0;
-    for(var arrayIndex in punkte_antworten){
-        totalscore += punkte_antworten[arrayIndex][1];
-    }
-    document.getElementById("section-container6").style.display = "none";
-    document.getElementById("result_placeholder").innerHTML = "Your testscore is " + totalscore +"\n Congratulations!"
-    document.getElementById("result").style.display = "block";
-}
