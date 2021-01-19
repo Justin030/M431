@@ -4435,3 +4435,7 @@
 .content{
 	
 }
+
+#result{
+	display: none;
+}
