@@ -4431,11 +4431,12 @@
 			}
 
 		}
-		
-.content{
-	
-}
 
 #result{
 	display: none;
+}
+
+#result_placeholder{
+    font-family: 'Open Sans';
+    font-size: initial;
 }
