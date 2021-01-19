@@ -1,22 +1,71 @@
-var punktzahl = 50;
-var punkte_antworten = [ ["first", 0], ["second", 0], ["third", 0]];
+var labelID, labelClass;
+var countedSectionId = false;
+var punktzahl = 0;
+var punkte_antworten = [["section-container1", 0],
+                        ["section-container2", 0],
+                        ["section-container3", 0], 
+                        ["section-container4", 0], 
+                        ["section-container5", 0], 
+                        ["section-container6", 0]];
 
-function reply_click(btn_id){
-    console.log(btn_id)
+function showresults(){
+    var totalscore = 0;
+    for(var arrayIndex in punkte_antworten){
+        totalscore += punkte_antworten[arrayIndex][1];
+    }
+    document.getElementById("section-container6").style.display = "none";
+    document.getElementById("result_placeholder").innerHTML = "Your testscore is " + totalscore +"\n Congratulations!"
+    document.getElementById("result").style.display = "block";
+}
 
-    $("#1.3").siblings().css( "background-color", "grey" );
-    $("#"+btn_id).siblings().css("background-color", "blue");
-    document.getElementById(btn_id).style.backgroundColor = "white";
+function checkallanswers(){
+    var allAnswered = false;
+    for (var i=0; i<6; i++){
+        if(punkte_antworten[i][1] != 0){
+            allAnswered = true;
+        }else{
+            allAnswered = false;
+        }
+    }
 
-    //ID von den Parant Elementen
-    idOptionContainer = document.getElementById(btn_id).parentNode.id; 
-    idSectionContainer = document.getElementById(idOptionContainer).parentNode.id;
+    if(allAnswered){
+        showresults();
+    }
+}
 
-    //Jeder Sektion wird nur eine Punktzahl gegeben!
+$('label').click(function() {
+    labelID = $(this).attr('id');
+    labelClass = document.getElementById(labelID).className;
+    countedSectionId = false; 
+
+    idLiContainer = document.getElementById(labelID).parentNode.id; 
+    idFormContainer = document.getElementById(idLiContainer).parentNode.id;
+    idSectionContainer = document.getElementById(idFormContainer).parentNode.id;
+
+    switch (labelClass){
+        case 'mc':
+            punktzahl = 30;
+            break;
+        case 'vi':
+            punktzahl = 20;
+            break;
+        case 'ae':
+            punktzahl = 10;
+            break;
+        case 'aa':
+            punktzahl = 40;
+            break;
+    }
+
+    //So that each section is assigned only one score!
     for (var arrayIndex in punkte_antworten){
         if(punkte_antworten[arrayIndex][0] == idSectionContainer){
             punkte_antworten[arrayIndex][1] = punktzahl;
+            countedSectionId = true; 
+            if(arrayIndex == 5){
+                checkallanswers();
+            }
             break;
         }
     }
-}
+});
