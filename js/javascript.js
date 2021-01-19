@@ -31,16 +31,13 @@ function showresults(){
     else if(totalscore >= 180 && totalscore <= 240)
         your_result = typeAa;
     else{
-        console.log("Die punktzahl war") + totalscore;
-        console.log(punkte_antworten)
+        console.log("Die punktzahl war") + totalscore + "\r\n" + punkte_antworten;
         your_result = "Du hattest kein genaues Resultat, aber das passt am meisten zu dir. \n" + typeVi;
     }
     
     document.getElementById("questions_container").style.display = "none";
     document.getElementById("result_placeholder").innerHTML = your_result;
     document.getElementById("result").style.display = "block";
-    console.log(punkte_antworten);
-    console.log(your_result)
 }
 
 function checkallanswers(){
