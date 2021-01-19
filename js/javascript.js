@@ -17,17 +17,18 @@ function showresults(){
     var totalscore = 0;
     var your_result;
     
-    for(var i = 0; i++; i <=6){
-        totalscore += punkte_antworten[i][1];
+    for (var arrayIndex in punkte_antworten){
+        console.log(punkte_antworten[arrayIndex][1]);
+        totalscore = totalscore + punkte_antworten[arrayIndex][1];
     }
-    
+
     if(totalscore <= 80)
         your_result = typeMc;
-    if(totalscore >= 80 && totalscore <= 130)
+    else if(totalscore >= 80 && totalscore <= 130)
         your_result = typeVi;
-    if(totalscore >= 130 && totalscore <= 180)
+    else if(totalscore >= 130 && totalscore <= 180)
         your_result = typeAe;
-    if(totalscore >= 180 && totalscore <= 240)
+    else if(totalscore >= 180 && totalscore <= 240)
         your_result = typeAa;
     else{
         console.log("Die punktzahl war") + totalscore;
@@ -38,7 +39,8 @@ function showresults(){
     document.getElementById("questions_container").style.display = "none";
     document.getElementById("result_placeholder").innerHTML = your_result;
     document.getElementById("result").style.display = "block";
-    console.log(punkte_antworten)
+    console.log(punkte_antworten);
+    console.log(your_result)
 }
 
 function checkallanswers(){
