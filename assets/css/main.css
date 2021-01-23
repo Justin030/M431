@@ -2935,7 +2935,7 @@
 					.wrapper.style1 input[type="button"].alt.icon:before,
 					.wrapper.style1 button.alt.icon:before,
 					.wrapper.style1 .button.alt.icon:before {
-						color: #fbb5b5;
+						color: #ffffff;
 					}
 
 				.wrapper.style1 input[type="submit"].special,
@@ -2998,23 +2998,23 @@
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
-				color: #fbb5b5 !important;
+				color: #ffffff !important;
 			}
 
 			.wrapper.style1 :-moz-placeholder {
-				color: #fbb5b5 !important;
+				color: hsl(0, 0%, 100%) !important;
 			}
 
 			.wrapper.style1 ::-moz-placeholder {
-				color: #fbb5b5 !important;
+				color: #ffffff !important;
 			}
 
 			.wrapper.style1 :-ms-input-placeholder {
-				color: #fbb5b5 !important;
+				color: #ffffff !important;
 			}
 
 			.wrapper.style1 .formerize-placeholder {
-				color: #fbb5b5 !important;
+				color: #ffffff !important;
 			}
 
 			.wrapper.style1 ul.alt li {
@@ -3022,7 +3022,7 @@
 			}
 
 			.wrapper.style1 header p {
-				color: #fbb5b5;
+				color: #ffffff;
 			}
 
 			.wrapper.style1 table tbody tr {
@@ -3523,7 +3523,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #fbb5b5;
+			color: #ffffff;
 			cursor: pointer;
 			display: block;
 			height: 3.25em;
@@ -4272,7 +4272,7 @@
 				#footer input[type="button"].alt.icon:before,
 				#footer button.alt.icon:before,
 				#footer .button.alt.icon:before {
-					color: #fbb5b5;
+					color: #ffffff;
 				}
 
 			#footer input[type="submit"].special,
@@ -4335,23 +4335,23 @@
 		}
 
 		#footer ::-webkit-input-placeholder {
-			color: #fbb5b5 !important;
+			color: #ffffff !important;
 		}
 
 		#footer :-moz-placeholder {
-			color: #fbb5b5 !important;
+			color: #ffffff !important;
 		}
 
 		#footer ::-moz-placeholder {
-			color: #fbb5b5 !important;
+			color: #ffffff !important;
 		}
 
 		#footer :-ms-input-placeholder {
-			color: #fbb5b5 !important;
+			color: #ffffff !important;
 		}
 
 		#footer .formerize-placeholder {
-			color: #fbb5b5 !important;
+			color: #ffffff !important;
 		}
 
 		#footer ul.alt li {
